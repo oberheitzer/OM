@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OM.Library", "OM.Library\OM.Library.csproj", "{0B2F1DE0-74CF-4C04-8492-661111CABEA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OM.Library.Test", "OM.Library.Test\OM.Library.Test.csproj", "{4EA195DF-D546-424B-B324-4BA6BBBC2211}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B2F1DE0-74CF-4C04-8492-661111CABEA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B2F1DE0-74CF-4C04-8492-661111CABEA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B2F1DE0-74CF-4C04-8492-661111CABEA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B2F1DE0-74CF-4C04-8492-661111CABEA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EA195DF-D546-424B-B324-4BA6BBBC2211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EA195DF-D546-424B-B324-4BA6BBBC2211}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EA195DF-D546-424B-B324-4BA6BBBC2211}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EA195DF-D546-424B-B324-4BA6BBBC2211}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
