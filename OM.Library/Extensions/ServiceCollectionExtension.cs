@@ -6,9 +6,7 @@ public static class ServiceCollectionExtension
 {
     public static ServiceCollection AddServices(this ServiceCollection services)
     {
-        services.AddHttpClient<IWeatherService, WeatherService>(httpClient => {
-            // httpClient.BaseAddress = new Uri(uriString: Constant.BaseUrl);
-        });
+        services.AddHttpClient<IWeatherService, WeatherService>();
         services.AddScoped<IStoreService, StoreService>();
         return services;
     }
