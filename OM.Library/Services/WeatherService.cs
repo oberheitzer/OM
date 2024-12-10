@@ -25,7 +25,7 @@ internal sealed class WeatherService : IWeatherService
     public async Task<WeatherData> GetForecastAsync()
     {
         _httpClient.BaseAddress = new Uri(ForecastBaseUri);
-        HttpResponseMessage response = await _httpClient.GetAsync(requestUri: $"?{ForecastQueryParams}");
+        HttpResponseMessage response = await _httpClient.GetAsync(requestUri: new WeatherDataFilter().ToQueryString());
         if (response.IsSuccessStatusCode)
         {
             return ToWeatherData(json: await response.Content.ReadAsStreamAsync());
@@ -35,10 +35,8 @@ internal sealed class WeatherService : IWeatherService
 
     public async Task<WeatherData> GetHistoryWeatherAsync(DateOnly day)
     {
-        var formattedDay = day.ToString("yyyy-MM-dd");
         _httpClient.BaseAddress = new Uri(HistoryBaseUri);
-        
-        HttpResponseMessage response = await _httpClient.GetAsync(requestUri: $"?latitude=51.7883&longitude=6.1387&start_date={formattedDay}&end_date={formattedDay}&hourly=temperature_2m,relativehumidity_2m,dewpoint_2m,apparent_temperature,precipitation,rain,snowfall,weathercode,cloudcover,cloudcover_low,cloudcover_mid,cloudcover_high,shortwave_radiation,direct_radiation,diffuse_radiation,direct_normal_irradiance,windspeed_10m,windspeed_100m,windgusts_10m,et0_fao_evapotranspiration,vapor_pressure_deficit&timezone=Europe%2FBerlin");
+        HttpResponseMessage response = await _httpClient.GetAsync(requestUri: new WeatherDataFilter(day: day).ToQueryString());
         if (response.IsSuccessStatusCode)
         {
             return ToWeatherData(json: await response.Content.ReadAsStreamAsync());
