@@ -4,9 +4,9 @@ using OM.Library;
 
 namespace OM.Main;
 
-internal class Program
+public class Program
 {
-    static async Task Main(string[] args)
+    public static async Task Main(string[] args)
     {
         var provider = Starter.Run();
 
